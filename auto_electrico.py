@@ -27,12 +27,12 @@ class AutoElectrico(Vehiculo, SistemaNavegacion, SistemaBateria):
         SistemaNavegacion.__init__(self, version_mapa, modo_eco)
         SistemaBateria.__init__(self, capacidad_kwh, celdas)
 
-        # Atributos propios encapsulados
-        self._nivel_carga: float = 0.0       # Se asigna a través del setter
-        self.__autonomia_km: float = 0.0     # Privado, setter con validación
-        self.__velocidad_max: float = 0.0    # Privado, setter con validación
-
-        # Usar setters para garantizar validación desde la construcción
+        
+        self._nivel_carga: float = 0.0       
+        self.__autonomia_km: float = 0.0    
+        self.__velocidad_max: float = 0.0   
+        
+        
         self.nivel_carga = nivel_carga
         self.autonomia_km = autonomia_km
         self.velocidad_max = velocidad_max
